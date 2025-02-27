@@ -1,11 +1,29 @@
-import Taskbar from './Taskbar';
+import React, { useState } from 'react';
+import ClientDocs from './ClientDocs';
+import ServerDocs from './ServerDocs';
+import 'prismjs/themes/prism.css';
+import 'prismjs/components/prism-javascript';
 
 function Docs() {
+  const [activeTab, setActiveTab] = useState('Client');
+
+  const handleTab = (buttonName: string) => {
+    setActiveTab(buttonName);
+  };
+
   return (
     <>
-      <Taskbar />
-      <h1 className='title'>Docs</h1>
-      <p className='subtext'>Understand how it works</p>
+      <div className='Docs'>
+        <div className='selector'>
+          <button className='Client' onClick={() => handleTab('Client')}>
+            Client
+          </button>
+          <button className='Server' onClick={() => handleTab('Server')}>
+            Server
+          </button>
+        </div>
+        {activeTab === 'Client' ? <ClientDocs /> : <ServerDocs />}
+      </div>
     </>
   );
 }

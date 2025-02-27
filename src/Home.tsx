@@ -166,7 +166,11 @@ setCharacterinfo(responseCharacter.data.people);`.split('\n');
         <div className='mainBox'>
           <h1 className='title'> CacheIQL.</h1>
           <p className='subtext'>The one stop tool for GraphQL</p>
-          <button className='mainButton'>Check Us Out</button>
+          <button className='mainButton'>
+            <a href='https://medium.com/@matzec42/cacheiql-the-one-stop-tool-for-graphql-cc8fbd7f915d'>
+              Check Us Out
+            </a>
+          </button>
           <div className='hotLinks'>
             <button className='Github'>
               <a href='https://github.com/oslabs-beta/CacheIQL'>

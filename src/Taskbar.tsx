@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router';
-
+import database from './assets/database.png';
 function Taskbar() {
   const navigate = useNavigate();
   const handleClick = (buttonName: string) => {
@@ -27,18 +27,30 @@ function Taskbar() {
   };
   return (
     <div className='taskBar'>
-      <button className='taskBarButtons' onClick={() => handleClick('/')}>
-        Home
-      </button>
-      <button className='taskBarButtons' onClick={() => handleClick('docs')}>
-        Docs
-      </button>
-      <button className='taskBarButtons' onClick={() => handleClick('about')}>
-        About
-      </button>
-      <button className='taskBarButtons' onClick={() => handleClick('contact')}>
-        Contact
-      </button>
+      <span className='left'>
+        <button
+          className='taskBarButtons'
+          id='Home'
+          onClick={() => handleClick('/')}
+        >
+          <img src={database} />
+        </button>
+      </span>
+
+      <span className='right'>
+        <button className='taskBarButtons' onClick={() => handleClick('docs')}>
+          Docs
+        </button>
+        <button className='taskBarButtons' onClick={() => handleClick('about')}>
+          About
+        </button>
+        <button
+          className='taskBarButtons'
+          onClick={() => handleClick('contact')}
+        >
+          Contact
+        </button>
+      </span>
     </div>
   );
 }
