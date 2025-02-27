@@ -1,0 +1,211 @@
+/*
+C19AB7 - Lilac for writing and buttons
+0B7189 - Creulean TBD
+85C7F2 - Light Sky blue TBD
+170A1C - Dark Purple for background
+2F2963 - Space Cadet not sure yet probably for highlights
+*/
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes expand {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 75vh;
+    height: 60vh;
+    opacity: 1;
+  }
+}
+
+html {
+  font-family: 'Source Code Pro', monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #c19ab7;
+}
+
+body {
+  cursor: url('assets/diamond.png'), auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  background-color: #170a1c;
+  margin: 0;
+  padding: 0 5%;
+}
+
+.title {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+.mainBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2rem;
+  padding-left: 6rem;
+  max-width: 500px;
+}
+
+.subtext {
+  display: flex;
+  flex-direction: column;
+}
+
+.subtext {
+  font-size: 1.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #c19ab7;
+  width: 0;
+  animation: typing 2s steps(30, end) forwards, blink 1s step-end infinite;
+}
+
+button {
+  cursor: url('assets/close-stroke.png'), auto;
+  font-family: 'Source Code Pro', monospace;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: #c19ab7;
+}
+button:active {
+  cursor: url('assets/close-stroke.png'), auto;
+}
+button:hover {
+  cursor: url('assets/close-stroke.png'), auto;
+}
+
+.taskBarButtons {
+  background-color: transparent;
+  border: none;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  font-size: 2.5rem;
+  transition: background-color ease 0.3s;
+}
+.taskBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  overflow: hidden;
+  border-bottom: 2px solid #c19ab7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 2rem;
+  background-color: #170a1c;
+}
+.mainButton {
+  font-size: 1rem;
+  border: none;
+  padding: 0.75rem;
+  background-color: white;
+  transition: background-color 0.3s ease;
+}
+.mainButton:hover,
+.taskBarButtons:hover {
+  background-color: #f1e1ed;
+}
+.mainButton:active,
+.taskBarButtons:active {
+  background-color: #3e2a47;
+}
+
+// .codeText {
+//   white-space: nowrap;
+//   overflow: hidden;
+//   border-right: 2px solid #c19ab7; /* Blinking cursor */
+//   width: 0;
+//   //animation: typing 4s steps(40, end) forwards;
+// }
+.codeSnippet {
+  scrollbar-width: none;
+  border: 2px solid #c19ab7;
+  overflow-y: scroll;
+  background-color: white;
+  margin-left: 10rem;
+  width: 75vh;
+  height: 60vh;
+  opacity: 1;
+  white-space: pre;
+  animation: expand 1s ease-out forwards;
+  scroll-behavior: smooth;
+}
+
+.language-javascript {
+  line-height: 1px !important;
+  margin: 0;
+}
+.codeSnippet code {
+  font-size: 0.8rem !important; /* Adjust as needed */
+  margin: 0;
+  color: #ffffff; /* Ensures white text */
+}
+
+.codeSnippet pre {
+  background: none !important;
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.hotLinks {
+  display: flex;
+  justify-content: start;
+  margin-top: 8.5rem;
+  gap: 1rem;
+}
+
+.hotLinks button {
+  //background: none;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border: none;
+
+  padding: 0.5rem;
+}
+.hotLinks img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Github {
+  padding: 2rem;
+  border-radius: 100px;
+}
+
+.NPM {
+  padding: 2rem;
+  border-radius: 100px;
+}
+
+.Linkdin {
+  padding: 2rem;
+  border-radius: 100px;
+}
+.dashboard {
+  display: flex;
+  justify-content: center;
+}
