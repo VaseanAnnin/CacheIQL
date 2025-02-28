@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
 import githubIcon from './assets/githubIcon.png';
 import NpmIcon from './assets/NpmLogo.png';
-import LinkedinLogo from './assets/LinkdinLogo.webp';
 import Prism from 'prismjs';
 import 'prismjs/themes/prism.css';
 import 'prismjs/components/prism-javascript';
