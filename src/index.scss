@@ -368,11 +368,35 @@ ul li ol li {
   background-color: #ffffff;
   font-size: 1rem !important;
 }
+#listP {
+  font-size: 1rem;
+}
 
 .links {
   color: #85c7f2;
   //text-decoration: none;
-  display: block; /* Ensures the entire button is clickable */
+  // display: block; /* Ensures the entire button is clickable */
   width: 100%;
   height: 100%;
+}
+
+ol li {
+  font-size: 1.2rem;
+}
+
+.readCode {
+  font-size: 1rem;
+}
+
+.About {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+.aboutSubtext {
+  font-size: 1.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #c19ab7;
+  width: 0;
+  animation: typing 2s steps(30, end) forwards, blink 1s step-end infinite;
 }

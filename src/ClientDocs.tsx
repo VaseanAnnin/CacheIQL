@@ -15,27 +15,56 @@ function ClientDocs() {
           <h1>@cacheiql/client</h1>
           <hr />
           <p>
-            @cacheiql/client is a lightweight client-side caching solution for
-            GraphQL queries, designed to improve response times through local
-            storage and request deduplication. By intercepting GraphQL requests,
-            CacheIQL checks the cache for stored responses and only fetches
-            missing data from the server, minimizing redundant network requests.
-            Its efficient key-value storage approach enables quick retrieval and
-            cache updates while ensuring data consistency. CacheIQL seamlessly
-            integrates with existing GraphQL clients, optimizing performance
-            without requiring additional backend configuration.
+            <strong>@cacheiql/client</strong> is a lightweight client-side
+            caching solution for GraphQL queries, designed to improve response
+            times through local storage and request deduplication. By
+            intercepting GraphQL requests, CacheIQL checks the cache for stored
+            responses and only fetches missing data from the server, minimizing
+            redundant network requests. Its efficient key-value storage approach
+            enables quick retrieval and cache updates while ensuring data
+            consistency. CacheIQL seamlessly integrates with existing GraphQL
+            clients, optimizing performance without requiring additional backend
+            configuration.
           </p>
           <p>
-            @cacheiql/client is an npm package powered through OS Labs ,
-            developed by Vasean Annin, Gabriella Davoudpour , George German,
-            Pedram Kashani , and Chris Matzen.
+            @cacheiql/client is an npm package powered through{' '}
+            <a href='https://github.com/oslabs-beta' className='links'>
+              OS Labs
+            </a>
+            , developed by{' '}
+            <a href='https://github.com/VaseanAnnin' className='links'>
+              Vasean Annin
+            </a>
+            ,{' '}
+            <a href='ub.com/gabyd613' className='links'>
+              Gabriella Davoudpour{' '}
+            </a>
+            ,{' '}
+            <a href='https://github.com/GeorgeGerman29' className='links'>
+              George German
+            </a>
+            ,{' '}
+            <a href='https://github.com/PedramKashani' className='links'>
+              Pedram Kashani
+            </a>{' '}
+            , and{' '}
+            <a href='https://github.com/matzec42' className='links'>
+              Chris Matzen
+            </a>
           </p>
           <h1>Installation</h1>
           <hr />
           <p>
-            Install cacheiql/client from npm using the terminal command: npm i
-            cacheiql-client @cacheiql/client will be added as a dependency to
-            your package.json file.
+            Install{' '}
+            <a
+              href='https://www.npmjs.com/package/cacheiql-client'
+              className='links'
+            >
+              cacheiql/client
+            </a>{' '}
+            from npm using the terminal command: npm i cacheiql-client
+            @cacheiql/client will be added as a dependency to your package.json
+            file.
           </p>
           <h2>Import CacheIQL-Server</h2>
           <hr />
