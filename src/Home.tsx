@@ -187,9 +187,6 @@ setCharacterinfo(responseCharacter.data.people);`.split('\n');
                 <img src={NpmIcon} />
               </a>
             </button>
-            <button className='Linkdin'>
-              <img src={LinkedinLogo} />
-            </button>
           </div>
         </div>
         <div className='codeSnippet' ref={codeSnippetRef}></div>

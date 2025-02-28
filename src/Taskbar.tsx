@@ -20,9 +20,6 @@ function Taskbar() {
       navigate('/docs');
     } else if (buttonName === 'about') {
       navigate('/about');
-    } else if (buttonName === 'contact') {
-      navigate('/contact');
-      // navigate to contact
     }
   };
   return (
@@ -44,12 +41,12 @@ function Taskbar() {
         <button className='taskBarButtons' onClick={() => handleClick('about')}>
           About
         </button>
-        <button
+        {/* <button
           className='taskBarButtons'
           onClick={() => handleClick('contact')}
         >
           Contact
-        </button>
+        </button> */}
       </span>
     </div>
   );

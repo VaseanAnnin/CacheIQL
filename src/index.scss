@@ -388,15 +388,159 @@ ol li {
   font-size: 1rem;
 }
 
+/* Prevent scrolling for the entire application */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Prevents scrolling outside About section */
+}
+
+/* Make the Taskbar and other elements fixed */
+// .Taskbar {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 60px; /* Adjust as needed */
+//   background: #333;
+//   color: white;
+//   display: flex;
+//   align-items: center;
+//   padding: 0 20px;
+//   z-index: 1000;
+// }
+
+/* About Section: Allow internal scrolling */
+.AboutSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100vw;
+  height: 100vh; /* Takes full viewport */
+  padding: 50px 20px;
+  box-sizing: border-box;
+  gap: 50px;
+  background-color: #f9f9f9;
+  overflow-y: auto; /* Enable scrolling within AboutSection */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  position: relative;
+}
+
+.Header {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
 .About {
-  font-size: 4rem;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #333;
   margin-bottom: 0.5rem;
 }
+
 .aboutSubtext {
   font-size: 1.5rem;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid #c19ab7;
-  width: 0;
-  animation: typing 2s steps(30, end) forwards, blink 1s step-end infinite;
+  color: #666;
+}
+.taskBar {
+  z-index: 1000;
+}
+.slide-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slide-container h2 {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.slide-container img.profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid #ddd;
+}
+
+.slide-container p {
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.slide-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+}
+
+.slide-navigation button {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #85c7f2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.slide-navigation button:hover {
+  background-color: #acd6f2;
+}
+
+.Client {
+  padding-top: 2rem;
+}
+.Server {
+  padding-top: 2rem;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: start;
+}
+
+.socialLinks button {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%; /* Make the button circular */
+  overflow: hidden; /* Ensures content stays within the button */
+  padding: 0; /* Removes any padding */
+  border: 2px solid #3e2a47; /* Removes button border */
+  background-color: transparent; /* Makes the background transparent */
+}
+
+.socialLinks img {
+  width: 100%; /* Make the image take up the entire button */
+  height: 100%; /* Ensure the image covers the button fully */
+  object-fit: cover; /* Ensures the image fills the circle, cutting off any excess */
 }

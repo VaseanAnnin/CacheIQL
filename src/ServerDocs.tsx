@@ -181,7 +181,7 @@ const cachedRootValue = cacheMiddleware(rootValue, TTL_IN_SECONDS, graphqlSchema
             <p className='instruction'>node index.js</p>
             <p>
               Visit{' '}
-              <a href='http://localhost:3000/graphql ' className='link'>
+              <a href='http://localhost:3000/graphql ' className='links'>
                 http://localhost:3000/graphql
               </a>
               to access GraphQL and start testing the caching behavior.
